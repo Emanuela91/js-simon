@@ -7,7 +7,7 @@ let contenitore = document.getElementsByClassName("container");
 console.log(contenitore);
 
 let numRand = document.getElementById("numrand");
-
+let timer = document.getElementById("timer");
 
 
 let button = document.getElementById("start");
@@ -32,6 +32,7 @@ button.addEventListener("click",
         
         let clock = setInterval(function(){
             console.log(seconds);
+            timer.innerHTML = `${seconds}`;
             if(seconds === 0){
                 clearInterval(clock);
             } else{
